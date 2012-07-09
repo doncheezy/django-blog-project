@@ -1,0 +1,212 @@
+Last login: Thu Jul  5 09:10:54 on ttys001
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ cd ..
+Nanas-MacBook-Pro-2:git-and-bash-lab NanaK$ cd ..
+Nanas-MacBook-Pro-2:doncheezy NanaK$ ls
+git-and-bash-lab
+Nanas-MacBook-Pro-2:doncheezy NanaK$ cd ..
+Nanas-MacBook-Pro-2:Documents NanaK$ ls
+About Stacks.lpdf			e-l01-introductions.pdf			lecture_07.pdf
+Assignment 1.docx			e-l02-entrepreneurship.pdf		lectures
+Christian Literature			e-l04-ideas_opportunities_teamwork.pdf	misc
+Microsoft User Data			lec05.pdf				practice
+Motion Documents			lecture_04 (1).pdf			practice.py
+Python Django Books			lecture_04.pdf				python ref
+codeblocks				lecture_05.pdf				record.smrc
+django_tutorials.pdf			lecture_06 (1).pdf			survey.docx
+doncheezy				lecture_06.pdf				the_zoo_assignment.pdf
+Nanas-MacBook-Pro-2:Documents NanaK$ open django_tutorials.pdf
+Nanas-MacBook-Pro-2:Documents NanaK$ cd doncheezy
+Nanas-MacBook-Pro-2:doncheezy NanaK$ ls
+git-and-bash-lab
+Nanas-MacBook-Pro-2:doncheezy NanaK$ cd git-and-bash-lab
+Nanas-MacBook-Pro-2:git-and-bash-lab NanaK$ ls
+Lab04.pdf		Lab_Python_02		Lab_Python_05		django-intro		solutions
+Lab_Python_00		Lab_Python_03		Lab_Python_06		lab-instructions.pdf	webnotes
+Lab_Python_01		Lab_Python_04		django-blog-project	nana.txt
+Nanas-MacBook-Pro-2:git-and-bash-lab NanaK$ cd django-blog-project
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git pull instructors master
+From https://github.com/doncheezy/django-blog-project
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ heroku login
+Enter your Heroku credentials.
+Email: doncheezy1@gmail.com
+Password (typing will be hidden): 
+Authentication failed.
+Enter your Heroku credentials.
+Email: doncheezy1@gmail.com
+Password (typing will be hidden): 
+Authentication successful.
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ heroku create djangoblog --stack cedar
+Creating djangoblog... done, stack is cedar
+http://djangoblog.herokuapp.com/ | git@heroku.com:djangoblog.git
+Git remote heroku added
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git push heroku master
+Warning: Permanently added the RSA host key for IP address '50.19.85.132' to the list of known hosts.
+Counting objects: 10, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 103.82 KiB, done.
+Total 10 (delta 0), reused 0 (delta 0)
+
+-----> Heroku receiving push
+ !     Heroku push rejected, no Cedar-supported app detected
+
+To git@heroku.com:djangoblog.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@heroku.com:djangoblog.git'
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git push heroku master
+Warning: Permanently added the RSA host key for IP address '50.19.85.154' to the list of known hosts.
+Counting objects: 10, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 103.82 KiB, done.
+Total 10 (delta 0), reused 0 (delta 0)
+
+-----> Heroku receiving push
+ !     Heroku push rejected, no Cedar-supported app detected
+
+To git@heroku.com:djangoblog.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@heroku.com:djangoblog.git'
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git push heroku master
+Counting objects: 10, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 103.82 KiB, done.
+Total 10 (delta 0), reused 0 (delta 0)
+
+-----> Heroku receiving push
+ !     Heroku push rejected, no Cedar-supported app detected
+
+To git@heroku.com:djangoblog.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@heroku.com:djangoblog.git'
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git add .
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git commit -m "djangoblog"
+[master 54b5d34] djangoblog
+ Committer: Nana Kwesi Baffoe-Mensah <NanaK@Nanas-MacBook-Pro-2.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 8 files changed, 264 insertions(+), 0 deletions(-)
+ create mode 100644 blog/__init__.py
+ create mode 100644 blog/models.py
+ create mode 100644 blog/tests.py
+ create mode 100644 blog/views.py
+ create mode 100644 manage.py
+ create mode 100644 myblog/__init__.py
+ create mode 100644 myblog/settings.py
+ create mode 100644 myblog/urls.py
+ create mode 100644 myblog/wsgi.py
+ create mode 100644 requirements.txt
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git remote add heroku git@heroku.com:djangoblog.git
+fatal: remote heroku already exists.
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git remote add heroku1 git@heroku.com:djangoblog.git
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ git push heroku1 master
+Counting objects: 23, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (23/23), 108.11 KiB, done.
+Total 23 (delta 1), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Python/Django app detected
+-----> Preparing Python interpreter (2.7.2)
+-----> Creating Virtualenv version 1.7
+       New python executable in .heroku/venv/bin/python2.7
+       Also creating executable in .heroku/venv/bin/python
+       Installing distribute.............................................................................................................................................................................................done.
+       Installing pip...............done.
+       Running virtualenv with interpreter /usr/local/bin/python2.7
+-----> Activating virtualenv
+-----> Installing dependencies using pip version 1.0.2
+       Downloading/unpacking Django==1.4 (from -r requirements.txt (line 1))
+       Creating supposed download cache at /app/tmp/repo.git/.cache/pip_downloads
+         Storing download in cache at /app/tmp/repo.git/.cache/pip_downloads/http%3A%2F%2Fpypi.python.org%2Fpackages%2Fsource%2FD%2FDjango%2FDjango-1.4.tar.gz
+         Running setup.py egg_info for package Django
+           
+       Downloading/unpacking psycopg2==2.4.5 (from -r requirements.txt (line 2))
+         Storing download in cache at /app/tmp/repo.git/.cache/pip_downloads/http%3A%2F%2Fpypi.python.org%2Fpackages%2Fsource%2Fp%2Fpsycopg2%2Fpsycopg2-2.4.5.tar.gz
+         Running setup.py egg_info for package psycopg2
+           
+           no previously-included directories found matching 'doc/src/_build'
+       Downloading/unpacking dj-database-url==0.2.0 (from -r requirements.txt (line 3))
+         Downloading dj-database-url-0.2.0.tar.gz
+         Storing download in cache at /app/tmp/repo.git/.cache/pip_downloads/http%3A%2F%2Fpypi.python.org%2Fpackages%2Fsource%2Fd%2Fdj-database-url%2Fdj-database-url-0.2.0.tar.gz
+         Running setup.py egg_info for package dj-database-url
+           
+       Installing collected packages: Django, psycopg2, dj-database-url
+         Running setup.py install for Django
+           changing mode of build/scripts-2.7/django-admin.py from 600 to 755
+           
+           changing mode of /tmp/build_2xo3u12k3mvwn/.heroku/venv/bin/django-admin.py to 755
+         Running setup.py install for psycopg2
+           building 'psycopg2._psycopg' extension
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/psycopgmodule.c -o build/temp.linux-x86_64-2.7/psycopg/psycopgmodule.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/green.c -o build/temp.linux-x86_64-2.7/psycopg/green.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/pqpath.c -o build/temp.linux-x86_64-2.7/psycopg/pqpath.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/utils.c -o build/temp.linux-x86_64-2.7/psycopg/utils.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/bytes_format.c -o build/temp.linux-x86_64-2.7/psycopg/bytes_format.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/connection_int.c -o build/temp.linux-x86_64-2.7/psycopg/connection_int.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/connection_type.c -o build/temp.linux-x86_64-2.7/psycopg/connection_type.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/cursor_int.c -o build/temp.linux-x86_64-2.7/psycopg/cursor_int.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/cursor_type.c -o build/temp.linux-x86_64-2.7/psycopg/cursor_type.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/lobject_int.c -o build/temp.linux-x86_64-2.7/psycopg/lobject_int.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/lobject_type.c -o build/temp.linux-x86_64-2.7/psycopg/lobject_type.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/notify_type.c -o build/temp.linux-x86_64-2.7/psycopg/notify_type.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/xid_type.c -o build/temp.linux-x86_64-2.7/psycopg/xid_type.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_asis.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_asis.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_binary.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_binary.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_datetime.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_datetime.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_list.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_list.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_pboolean.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_pboolean.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_pdecimal.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_pdecimal.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_pint.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_pint.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_pfloat.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_pfloat.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/adapter_qstring.c -o build/temp.linux-x86_64-2.7/psycopg/adapter_qstring.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/microprotocols.c -o build/temp.linux-x86_64-2.7/psycopg/microprotocols.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/microprotocols_proto.c -o build/temp.linux-x86_64-2.7/psycopg/microprotocols_proto.o -Wdeclaration-after-statement
+           gcc -pthread -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPSYCOPG_DEFAULT_PYDATETIME=1 -DPSYCOPG_VERSION="2.4.5 (dt dec pq3 ext)" -DPG_VERSION_HEX=0x080409 -DPSYCOPG_EXTENSIONS=1 -DPSYCOPG_NEW_BOOLEAN=1 -DHAVE_PQFREEMEM=1 -I/usr/local/include/python2.7 -I. -I/usr/include/postgresql -I/usr/include/postgresql/8.4/server -c psycopg/typecast.c -o build/temp.linux-x86_64-2.7/psycopg/typecast.o -Wdeclaration-after-statement
+           gcc -pthread -shared build/temp.linux-x86_64-2.7/psycopg/psycopgmodule.o build/temp.linux-x86_64-2.7/psycopg/green.o build/temp.linux-x86_64-2.7/psycopg/pqpath.o build/temp.linux-x86_64-2.7/psycopg/utils.o build/temp.linux-x86_64-2.7/psycopg/bytes_format.o build/temp.linux-x86_64-2.7/psycopg/connection_int.o build/temp.linux-x86_64-2.7/psycopg/connection_type.o build/temp.linux-x86_64-2.7/psycopg/cursor_int.o build/temp.linux-x86_64-2.7/psycopg/cursor_type.o build/temp.linux-x86_64-2.7/psycopg/lobject_int.o build/temp.linux-x86_64-2.7/psycopg/lobject_type.o build/temp.linux-x86_64-2.7/psycopg/notify_type.o build/temp.linux-x86_64-2.7/psycopg/xid_type.o build/temp.linux-x86_64-2.7/psycopg/adapter_asis.o build/temp.linux-x86_64-2.7/psycopg/adapter_binary.o build/temp.linux-x86_64-2.7/psycopg/adapter_datetime.o build/temp.linux-x86_64-2.7/psycopg/adapter_list.o build/temp.linux-x86_64-2.7/psycopg/adapter_pboolean.o build/temp.linux-x86_64-2.7/psycopg/adapter_pdecimal.o build/temp.linux-x86_64-2.7/psycopg/adapter_pint.o build/temp.linux-x86_64-2.7/psycopg/adapter_pfloat.o build/temp.linux-x86_64-2.7/psycopg/adapter_qstring.o build/temp.linux-x86_64-2.7/psycopg/microprotocols.o build/temp.linux-x86_64-2.7/psycopg/microprotocols_proto.o build/temp.linux-x86_64-2.7/psycopg/typecast.o -L/usr/lib -lpq -o build/lib.linux-x86_64-2.7/psycopg2/_psycopg.so
+           
+           no previously-included directories found matching 'doc/src/_build'
+         Running setup.py install for dj-database-url
+           
+       Successfully installed Django psycopg2 dj-database-url
+       Cleaning up...
+-----> Installing dj-database-url...
+       Requirement already satisfied (use --upgrade to upgrade): dj-database-url>=0.2.0 in ./.heroku/venv/lib/python2.7/site-packages
+       Cleaning up...
+-----> Injecting Django settings...
+       Injecting code into ./myblog/settings.py to read from DATABASE_URL
+ !     Notice: settings injection will be deprecated for all new Django 
+ !     apps on July 1, 2012. Learn more:
+ !     https://devcenter.heroku.com/articles/django-injection
+-----> Collecting static files
+       72 static files copied.
+
+-----> Discovering process types
+       Procfile declares types         -> (none)
+       Default types for Python/Django -> web
+-----> Compiled slug size is 9.4MB
+-----> Launching... done, v4
+       http://djangoblog.herokuapp.com deployed to Heroku
+
+To git@heroku.com:djangoblog.git
+ * [new branch]      master -> master
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ heroku1 python manage.py syncdb
+-bash: heroku1: command not found
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ heroku python manage.py syncdb
+ !    `python` is not a heroku command.
+ !    See `heroku help` for a list of available commands.
+Nanas-MacBook-Pro-2:django-blog-project NanaK$ heroku run python manage.py syncdb
+Running `python manage.py syncdb` attached to terminal... u

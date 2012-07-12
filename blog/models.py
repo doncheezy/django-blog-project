@@ -17,7 +17,7 @@ class Comment(models.Model):
     author=models.CharField(max_length=60)
     created=models.DateField(auto_now_add=True)
     updated=models.DateField(auto_now=True)
-    post=models.ForeignKey(Post,related_name='comments')
+    post=models.ForeignKey(Post)
     def body_first_60(self):
         return self.body[:60] 
     def __unicode__(self):

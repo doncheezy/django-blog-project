@@ -3,10 +3,11 @@
 
 {% for post in post_list %}
 <ul>
-   <li>Title:{{post.title}}          </li>
+   <li><b>Title:{{post.title}}</b></li>
   <li>Created:{{post.created}}</li>
   <li>Last updated:{{post.updated}}</li>
   <li>{{post.body}}</li>
+  <li><a href ="/blog/posts/{{post.id}}/true" > show the details</a> </li>
   
 </ul>
 

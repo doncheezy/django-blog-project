@@ -1,11 +1,13 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-<ul>
-<li>{{postbysearch.}}</li>
-</ul>
+{% for post in postbysearch %}
+
+<p>title:{{post.title}}</p>
+<p>body:{{post.body}}</p>
 
 
 
+{% endfor %}
 {% endblock %}
   

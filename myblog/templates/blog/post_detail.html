@@ -4,6 +4,28 @@
   <li>{{postbyid.title}}</li>
   <li>{{postbyid.body}}</li>
   
+  {% for Comments in com %}
+  <p>Author:{{Comments.author}}</p>
+  <p>Comments:{{Comments.body}}</p>
+  <div>
+      <a href="/blog/comments/{{ Comments.id }}/edit">
+        Edit Comment
+    </a>
+    </div>
+  {% endfor %}
+  
+  
+  
+  
+  <h3>New Comment </h3>
+  <div>
+  <form method = 'post' action ="">
+      {{form.as_p}}
+      <input type = 'submit' name = 'Submit'>
+      </form>
+      
+   </div>
+   
 </ul>
 {% endblock %}
    
